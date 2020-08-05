@@ -23,7 +23,7 @@ const App = () => {
   // }, []);
 
   useEffect(() => {
-    const url = 'http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=R4zqJ5ZHschneHIM3WHmkEuBdif2TkOU&limit=5';
+    const url = 'https://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=R4zqJ5ZHschneHIM3WHmkEuBdif2TkOU&limit=5';
     axios.get(url)
     .then(function (result) {
       console.log(result.data.data)
@@ -40,7 +40,7 @@ const App = () => {
 
   return (
     <div className="wrapper">
-      <h2>Call API</h2>
+      <h2>Call API Giphy</h2>
       <div className="containerGif">
         {loading ? (
           <div className="lds-ring"><div></div><div></div><div></div><div></div></div>

@@ -34,8 +34,14 @@
   }
 }
 
+.wrapper{
+  text-align: center;
+}
+
 .containerGif {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .containerGif ul {
