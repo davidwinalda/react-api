@@ -33,3 +33,11 @@
     transform: rotate(360deg);
   }
 }
+
+.containerGif {
+  display: flex;
+}
+
+.containerGif ul {
+  list-style-type: none;
+}

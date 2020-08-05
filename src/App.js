@@ -36,26 +36,29 @@ const App = () => {
       setErrorMessage(error.message)
       setLoading(false);
     });
-  });
+  }, []);
 
   return (
-    <div className="App">
+    <div className="wrapper">
       <h2>Call API</h2>
-      {loading ? (
-        <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
-      ) : (
-          error ? (
-            <div>{errorMessage}</div>
-          ) : (
-              giphy.map((item) => (
-              <ul>
-                <li><img src={item.images.original.url} alt="Giphy" /></li>
-                <li>{item.title}</li>
-              </ul>
-            ))
-          )
-      )
-      }
+      <div className="containerGif">
+        {loading ? (
+          <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+        ) : (
+            error ? (
+              <div>{errorMessage}</div>
+            ) : (
+                giphy.map((item) => (
+                <ul className="wrapper">
+                  <li><img src={item.images.original.url} alt="Giphy" /></li>
+                  <li>{item.title}</li>
+                  <li>{item.type}</li>
+                </ul>
+              ))
+            )
+        )
+        }
+     </div>
     </div>
   );
 };
